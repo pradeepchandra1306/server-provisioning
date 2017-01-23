@@ -1,0 +1,14 @@
+---
+ec2_config:
+    region: us-west-2
+    zone: us-west-2b
+    keypair: ansible #-- key-par-name --#
+    instance_type: t2.micro
+    image: ami-30e65350
+    vpc_subnet_id: subnet-b63fcfd1 #-- sub-net-name --#
+    group: [devops]  #-- security-group-name --#
+    assign_public_ip: true
+    volume_size: 8
+    instance_tag_name: child
+    remote_user: ubuntu
+    ssh_path: ~/.ssh/id_rsa.pub #-- path to your ssh key e.g.: ~/.ssh/id_ansible --#

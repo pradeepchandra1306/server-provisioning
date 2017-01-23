@@ -1,0 +1,10 @@
+#Create the instance
+- hosts: localhost
+  user: ubuntu
+  become_method: sudo
+  connection: local
+  gather_facts: false
+  vars_files:
+    - vars/all.yml
+  roles:
+    - ec2_creation
